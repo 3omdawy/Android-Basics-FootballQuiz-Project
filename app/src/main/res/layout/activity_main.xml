@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context="com.example.android.footballquiz.MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Name"
+            android:id="@+id/name_text_view"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            style="@style/NormalTextStyle"
+            android:text="Test your knowledge in football by answering the following questions:" />
+
+        <!-- Question 1 -->
+        <View style="@style/Separator" />
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="1. Who is the African footballer of the year 2017?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/q1_answer"
+                style="@style/AnswerTextStyle"
+                android:text="Mohamed Salah" />
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Sadio Mane"/>
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Pierre Aubameyang"/>
+
+        </RadioGroup>
+
+        <!-- Question 2 -->
+        <View style="@style/Separator" />
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="2. Who is the top scorer of the year 2017?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Leo Messi" />
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Cristiano Ronaldo"/>
+
+            <RadioButton
+                android:id="@+id/q2_answer"
+                style="@style/AnswerTextStyle"
+                android:text="Harry Kane"/>
+
+        </RadioGroup>
+
+        <!-- Question 3 -->
+        <View style="@style/Separator" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/klopp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="3. Which team does Jurgen Klopp coach?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Real Madrid" />
+
+            <RadioButton
+                android:id="@+id/q3_answer"
+                style="@style/AnswerTextStyle"
+                android:text="Liverpool"/>
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Man United"/>
+
+        </RadioGroup>
+
+        <!-- Question 4 -->
+        <View style="@style/Separator" />
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="4. Who of the following did not coach Inter?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Walter Mazzari" />
+
+            <RadioButton
+                android:id="@+id/q4_answer"
+                style="@style/AnswerTextStyle"
+                android:text="Diego Simeone"/>
+
+            <RadioButton
+                style="@style/AnswerTextStyle"
+                android:text="Luciano Spalletti"/>
+
+        </RadioGroup>
+
+        <!-- Question 5 -->
+        <View style="@style/Separator" />
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="5. Who among these players did not win the English Premier League?"/>
+
+        <CheckBox
+            style="@style/AnswerTextStyle"
+            android:id="@+id/q5_answer_w1"
+            android:text="Eden Hazard" />
+
+        <CheckBox
+            style="@style/AnswerTextStyle"
+            android:id="@+id/q5_answer_c1"
+            android:text="Steven Gerrard" />
+
+        <CheckBox
+            style="@style/AnswerTextStyle"
+            android:id="@+id/q5_answer_c2"
+            android:text="Alexis Sanchez" />
+
+        <!-- Submission button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Submit"
+            android:textSize="18sp"
+            android:onClick="submitQuiz"/>
+
+    </LinearLayout>
+
+</ScrollView>
